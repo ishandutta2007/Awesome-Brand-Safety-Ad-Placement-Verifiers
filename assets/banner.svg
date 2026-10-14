@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%" style="border-radius: 12px; overflow: hidden;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050814"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="cyberCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+
+    <linearGradient id="shieldShield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="pillGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1); opacity: 0.25; }
+      50% { transform: scale(1.15); opacity: 0.45; }
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-50px); opacity: 0; }
+      20% { opacity: 0.6; }
+      80% { opacity: 0.6; }
+      100% { transform: translateY(380px); opacity: 0; }
+    }
+    @keyframes floatPill1 {
+      0%, 100% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(-10px) translateX(4px); }
+    }
+    @keyframes floatPill2 {
+      0%, 100% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(8px) translateX(-5px); }
+    }
+    @keyframes floatPill3 {
+      0%, 100% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(-8px) translateX(-4px); }
+    }
+    @keyframes waveFlow {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-600px); }
+    }
+    @keyframes shieldPulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.4)); }
+      50% { transform: scale(1.04); filter: drop-shadow(0 0 22px rgba(6, 182, 212, 0.7)); }
+    }
+
+    .bg-orb-1 { animation: pulseOrb 8s infinite ease-in-out; transform-origin: 200px 100px; }
+    .bg-orb-2 { animation: pulseOrb 10s infinite ease-in-out reverse; transform-origin: 1000px 250px; }
+    .scan-beam { animation: scanline 7s infinite linear; }
+    .pill-1 { animation: floatPill1 6s infinite ease-in-out; }
+    .pill-2 { animation: floatPill2 7s infinite ease-in-out; }
+    .pill-3 { animation: floatPill3 5s infinite ease-in-out; }
+    .flow-wave { animation: waveFlow 18s infinite linear; }
+    .shield-badge { animation: shieldPulse 4s infinite ease-in-out; transform-origin: 1060px 180px; }
+
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 37px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      fill: #94a3b8;
+    }
+    .pill-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .metric-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      fill: #64748b;
+    }
+    .metric-value {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      fill: #f1f5f9;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" fill="url(#bgGradient)"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
+
+  <!-- Dynamic Animated Ambient Glow Orbs in Background -->
+  <circle class="bg-orb-1" cx="200" cy="100" r="180" fill="#0284c7" opacity="0.25" filter="url(#glow)"/>
+  <circle class="bg-orb-2" cx="1020" cy="220" r="220" fill="#10b981" opacity="0.2" filter="url(#glow)"/>
+  <circle cx="600" cy="180" r="140" fill="#6366f1" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Dynamic Wave Stream (Background Flow) -->
+  <g opacity="0.25" class="flow-wave">
+    <path d="M 0 280 Q 150 250, 300 280 T 600 280 T 900 280 T 1200 280 T 1500 280 T 1800 280" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M 0 300 Q 150 270, 300 300 T 600 300 T 900 300 T 1200 300 T 1500 300 T 1800 300" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="6,6"/>
+  </g>
+
+  <!-- Scanning Line Effect -->
+  <line class="scan-beam" x1="0" y1="0" x2="1200" y2="0" stroke="url(#cyberCyan)" stroke-width="2" opacity="0.4" filter="url(#glow)"/>
+
+  <!-- Subtle Ambient Outer Border -->
+  <rect x="1" y="1" width="1198" height="358" rx="12" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.5"/>
+
+  <!-- ================= FOREGROUND CONTENT ================= -->
+
+  <!-- Top Category Tag -->
+  <g transform="translate(60, 42)">
+    <rect width="250" height="28" rx="14" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1"/>
+    <circle cx="16" cy="14" r="5" fill="#38bdf8"/>
+    <text x="30" y="19" class="pill-text" fill="#38bdf8">PROGRAMMATIC TRUST &amp; SAFETY</text>
+  </g>
+
+  <!-- Main Title & Subtitle in Foreground (Clear & Unobstructed) -->
+  <g transform="translate(60, 115)">
+    <text class="title-text" fill="url(#textGrad)">
+      Brand Safety &amp; Ad Placement Verifiers
+    </text>
+    <text y="38" class="subtitle-text">
+      The definitive ecosystem directory for IVT filtration, contextual intelligence &amp; pre-bid protection.
+    </text>
+  </g>
+
+  <!-- Dynamic Floating Feature Pills in Midground -->
+  <!-- Pill 1 -->
+  <g class="pill-1" transform="translate(60, 190)">
+    <rect width="180" height="36" rx="18" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2" filter="url(#pillGlow)"/>
+    <circle cx="20" cy="18" r="4.5" fill="#38bdf8"/>
+    <text x="34" y="23" class="pill-text" fill="#e2e8f0">🛡️ Pre-Bid Filtration</text>
+  </g>
+
+  <!-- Pill 2 -->
+  <g class="pill-2" transform="translate(255, 190)">
+    <rect width="195" height="36" rx="18" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(16, 185, 129, 0.4)" stroke-width="1.2" filter="url(#pillGlow)"/>
+    <circle cx="20" cy="18" r="4.5" fill="#10b981"/>
+    <text x="34" y="23" class="pill-text" fill="#e2e8f0">⚡ IVT / SIVT Detection</text>
+  </g>
+
+  <!-- Pill 3 -->
+  <g class="pill-3" transform="translate(465, 190)">
+    <rect width="205" height="36" rx="18" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(168, 85, 247, 0.4)" stroke-width="1.2" filter="url(#pillGlow)"/>
+    <circle cx="20" cy="18" r="4.5" fill="#c084fc"/>
+    <text x="34" y="23" class="pill-text" fill="#e2e8f0">🔍 Contextual Intelligence</text>
+  </g>
+
+  <!-- Metrics / Quick Highlights Bar (Bottom Left) -->
+  <g transform="translate(60, 260)">
+    <rect width="610" height="64" rx="10" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+    
+    <!-- Stat 1 -->
+    <g transform="translate(25, 16)">
+      <text class="metric-title">MARKET LEADERS</text>
+      <text y="24" class="metric-value">DV, IAS, Moat, HUMAN</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="225" y1="14" x2="225" y2="50" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+
+    <!-- Stat 2 -->
+    <g transform="translate(250, 16)">
+      <text class="metric-title">PROTOCOL STANDARDS</text>
+      <text y="24" class="metric-value">OpenRTB, VAST, C2PA, OM SDK</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="480" y1="14" x2="480" y2="50" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+
+    <!-- Stat 3 -->
+    <g transform="translate(505, 16)">
+      <text class="metric-title">ECOSYSTEM</text>
+      <text y="24" class="metric-value">SaaS + Open Source</text>
+    </g>
+  </g>
+
+  <!-- Right Decorative Shield Hologram (Dynamic pulse) -->
+  <g class="shield-badge" transform="translate(980, 130)">
+    <!-- Outer Glow Ring -->
+    <circle cx="50" cy="50" r="75" fill="rgba(16, 185, 129, 0.08)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1.5" stroke-dasharray="8 6"/>
+    <circle cx="50" cy="50" r="58" fill="rgba(6, 182, 212, 0.06)" stroke="rgba(6, 182, 212, 0.4)" stroke-width="1"/>
+
+    <!-- Shield Icon Geometry -->
+    <path d="M 50 18 L 82 32 C 82 62, 68 85, 50 94 C 32 85, 18 62, 18 32 Z" fill="url(#shieldShield)" opacity="0.9"/>
+    
+    <!-- Checkmark inside Shield -->
+    <path d="M 37 54 L 46 63 L 64 43" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Satellite Tech Node dots -->
+    <circle cx="12" cy="18" r="3" fill="#38bdf8"/>
+    <circle cx="88" cy="85" r="3" fill="#10b981"/>
+    <circle cx="95" cy="22" r="3" fill="#c084fc"/>
+  </g>
+</svg>
