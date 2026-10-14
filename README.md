@@ -1,193 +1,147 @@
-# Awesome-Brand-Safety-Ad-Placement-Verifiers
+# Awesome Brand Safety & Ad Placement Verifiers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## Top Brand Safety & Ad Placement Verifiers Ecosystem
+> A curated directory of enterprise SaaS platforms and open-source tools for **Brand Safety**, **Ad Placement Verification**, **Invalid Traffic (IVT/SIVT) Filtration**, and **Contextual Pre-Bid Intelligence**.
 
+*Focused on Contextual Scraping, Pre-Bid Filtering, Real-Time Ad Fraud Protection, and Cryptographic Content Provenance.*
 
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Contextual Scraping, Pre-Bid Filtering & Real-Time Brand Protection*  
-
-**Last updated: March 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Brand Safety & Ad Placement Verifiers**. These tools scrape contextual pages, classify content, and block unsafe placements before ads display—protecting brand equity while optimizing media spend.
-
-
-
-**Examples** include Integral Ad Science (IAS), DoubleVerify, Oracle Moat, HUMAN Security, Zefr, CHEQ, Pixalate, Confiant, GumGum, and Adloox (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, real-time bid stream analysis, and open content classification—ideal for publishers, ad ops teams, and developers seeking transparent, vendor-independent brand safety.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Integral Ad Science (IAS)](https://integralads.com/)**  
-
-  Global media measurement and optimization platform. Provides independent, third-party brand safety and suitability measurement for **ChatGPT Ads**—one of the first media quality partners supporting OpenAI's ad platform . Partnership with **Lyft Media** enables Viewability, Invalid Traffic (IVT), and Brand Safety measurement for in-app inventory—the first media quality measurement partner for Lyft . IAS sits at the intersection of AI, media, and marketing, chosen for ability to see every ad interaction and surrounding context . MRC-accredited across desktop, mobile web, app, and CTV .
-
-
-
-- **[DoubleVerify](https://doubleverify.com/)**  
-
-  Digital media measurement and analytics platform verifying ad quality, fraud, and brand safety. **Property-level accreditation** across desktop, mobile web, app, and CTV, with **55 domain and app languages** accredited . Different approach to ChatGPT Ads than IAS—launched **attribution measurement** rather than brand safety to help advertisers understand how ChatGPT Ads contribute to the customer journey . Tag-based measurement reaches players through VAST document; in VAST 4.1+, `AdVerifications` holds one `Verification` element per vendor .
-
-
-
-- **[Oracle Moat](https://www.oracle.com/)**  
-
-  Ad verification and measurement platform providing viewability, brand safety, and attention metrics. Widely used across display and video advertising.
-
-
-
-- **[HUMAN Security](https://www.humansecurity.com/)**  
-
-  Cybersecurity company protecting digital interactions from bots, fraud, and AI agents. **Human Defense Platform** verifies **20 trillion digital interactions weekly** . Provides high-fidelity decision-making defending against sophisticated threats.
-
-
-
-- **[Zefr](https://www.zefr.com/)**  
-
-  Brand suitability and contextual targeting for social platforms (YouTube, TikTok, Meta, Snap, Reddit). **Accredited surfaces** attach content-level labels by URL classification; viewability numbers come through Ads Data Hub—no buyer VAST tag needed . **English only** for YouTube content-level labeling .
-
-
-
-- **[CHEQ](https://www.cheq.ai/)**  
-
-  Protects digital assets by identifying and preventing invalid traffic, bots, and automated activities. **CHEQ Essentials** provides real-time detection and mitigation of non-human interactions, reducing fraudulent activity and improving data accuracy .
-
-
-
-- **[Pixalate](https://www.pixalate.com/)**  
-
-  Advertising fraud protection and compliance monitoring. Features **Media Ratings Terminal**, **Seller Trust Index**, and **Ad Trust & Safety APIs**. Dual commercialization path: self-serve API tiers (Premium Plus at $5,000/month for 50M hits) and sales-led enterprise packages . MRC-accredited for IVT identification and filtering .
-
-
-
-- **[Confiant](https://www.confiant.com/)**  
-
-  Protects digital advertising ecosystems by preventing and monitoring malicious ads and unwanted content in real-time. Detects security risks, enforces compliance controls, and analyzes creative quality. Integrates via APIs/SDKs to block ads carrying malware, scams, or disallowed content .
-
-
-
-- **[GumGum](https://gumgum.com/)**  
-
-  Contextual intelligence platform with brand safety verification. Uses computer vision and natural language processing to analyze page content and ensure brand-safe placements.
-
-
-
-- **[Adloox](https://www.adloox.com/)**  
-
-  Independent ad verification, brand safety, ad fraud detection, and viewability measurement. **DV360 pre-bid segments** priced at $0.05 CPM for Brand Suitability Exclusion, Viewability Optimization, and Fraud & IVT Filtration; $0.03 CPM for Brand Safety IAB Unsafe Categories Exclusion . Acquired by **Peer39 (June 2026)** —packaging may increasingly sit inside Peer39 constructs .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[AdVerify](https://github.com/Crynge/AdVerify)**  
-
-  Rust programmatic ad fraud detection & brand safety engine achieving **85,000 requests/second** throughput with **0.012ms p50 latency** . Six detection modules with published accuracy: **Click Injection (98.7%)** — missing IFA, DNT/LMT evasion, impossible screen dimensions; **Impression Laundering (96.2%)** — domain/bundle mismatches, inventory misrepresentation; **Bot Traffic (99.1%)** — known bot UAs, headless browsers, geo-language mismatch; **Ad Stacking (94.5%)** — creative larger than viewport, multi-ad overflow; **Brand Safety (95.8%)** — adult, violent, hate speech, drug, gambling, profanity; **Viewability (93.3%)** — IAB standards, dwell time, visible pixel thresholds . CLI for bid stream log analysis, single URL verification, and brand safety scanning. Full pipeline processes 18,000 req/s at 0.056ms p50 . **The most mature open-source ad verification engine available.**
-
-
-
-- **[Gravity SDK](https://pypi.org/project/gravity-sdk/)**  
-
-  Python SDK for contextual ad matching via Gravity API (Async, httpx-only). Integrates with FastAPI, Starlette, Django, Flask. Runs in parallel with LLM calls—**zero added latency** . Sends last 2 conversational messages for contextual ad matching; filters non-conversational roles (tool, function, ipython) . Configurable **relevancy threshold (0.0–1.0, default 0.2)** — lower values serve more ads with weaker contextual matches . Returns structured `AdResult` with ads, status, elapsed time, and error handling. Never raises—returns empty ads on failure . **Ideal for conversational AI ad placement.**
-
-
-
-- **[VAST Lint](https://vastlint.org/)**  
-
-  Open-source VAST validator checking structural consistency for **VAST 2.0–4.4** including whether `AdVerifications` is present and correctly structured . Critical for verifying that verification vendor tags survive wrapper hops and SSAI stitching. On open-web and CTV, DoubleVerify's tag-based measurement reaches players through VAST document—a dropped `AdVerifications` node leaves creative playing but verification vendor seeing nothing . **Essential infrastructure for self-hosted verification pipelines.**
-
-
-
-- **[Prebid.js C2PA Module (Encypher)](https://github.com/prebid/Prebid.js)**  
-
-  Real-Time Data module merged into Prebid.js (April 2026) emitting **C2PA content provenance signals** in every OpenRTB bid request . Publishers sign at CMS/CDN layer; module detects embedded C2PA markers, verifies server-side, and injects result at `site.ext.data.c2pa` . DSPs receive cryptographic content-integrity signal for brand safety decisioning—**doesn't rely on keyword blocklists or URL classification** . Zero-config for publishers: add module to Prebid build. **First C2PA provenance signal natively in programmatic supply chain.**
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **[OpenRTB Parser Libraries](https://github.com/topics/openrtb)** — Community libraries for parsing OpenRTB bid requests and detecting anomalies in programmatic streams.
-
-- **[IAB Open Measurement SDK (OM SDK)](https://github.com/InteractiveAdvertisingBureau/Open-Measurement-SDK)** — Open-source SDK from IAB Tech Lab enabling single integration supporting multiple verification vendors simultaneously. Eliminates SDK bloat by exposing OMID JavaScript API that DoubleVerify, IAS, Moat access without native code . Expanded to CTV (tvOS, AndroidTV) in 2022 .
-
-- Community **n8n** workflows for brand safety alert routing and pre-bid filtering automation.
-
-
-
-**Frameworks for building custom systems**: Combine **AdVerify** for high-throughput bid stream fraud detection with **Gravity SDK** for conversational AI ad placement, **VAST Lint** for verification tag integrity validation, **Prebid.js C2PA Module** for content provenance signals, and **PostgreSQL** for persistence—creating a fully self-hosted, enterprise-grade brand safety platform.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Brand safety systems handling ad placement data must comply with data protection regulations and industry standards (MRC, IAB).
-
-- **Property-level vs. content-level measurement are distinct.** MRC guidelines define **Property-Level Ad Verification** (URL keyword classification) and **Content-Level Brand Safety** (images, video, audio analysis) as separate service lines with separate accreditation . The 2012 IAB Ad Verification Guidelines contain **no reference to "safety"** —property-level reporting without content-level measurement is often mislabeled as "Brand Safety" in the marketplace . **Verify which accreditation a vendor actually holds for the specific environment and language you need.**
-
-- **VAST tag survival is not guaranteed.** A wrapper hop or SSAI stitcher that drops the `AdVerifications` node leaves creative playing and firing impression pixels while verification vendor sees nothing . Always validate resolved InLine XML after every wrapper and stitching step.
-
-- **Open-source coverage gaps exist.** AdVerify covers six detection modules at high accuracy but lacks the platform-specific accreditation letters (YouTube, TikTok, Meta, Snap) that commercial vendors publish . Zefr's English-only YouTube content-level labeling illustrates language coverage limits even among commercial vendors .
-
-- Self-hosted open-source solutions require proper security hardening, OpenRTB parsing infrastructure, and ongoing maintenance. Brand safety decisions affect advertiser spend and publisher revenue—validation against MRC-accredited reference data is essential.
-
-
+**Last updated:** October 2026
 
 ---
 
+## Table of Contents
 
+- [Overview](#overview)
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [Enterprise SaaS & Hosted Platforms](#enterprise-saas--hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [How to Contribute](#how-to-contribute)
+- [Verification Standards & Disclaimers](#verification-standards--disclaimers)
 
-**Made for ad ops engineers, brand safety analysts, programmatic traders, and developers building transparent ad verification solutions.**  
+---
 
-Let's make Brand Safety & Ad Placement Verification more open, data-driven, and cryptographically verifiable.
+## Overview
+
+In programmatic advertising, advertisers lose billions annually to invalid traffic (IVT), domain spoofing, ad stacking, impression laundering, and placement beside unsafe or non-suitable content (hate speech, violence, disinformation, adult content). 
+
+**Brand Safety & Ad Placement Verifiers** solve this by inspecting inventory, scraping context, validating creative execution, and making real-time pre-bid or post-bid enforcement decisions across OpenRTB exchanges, direct publisher integrations, and walled gardens.
+
+---
+
+## Sector Overview & Market Dynamics
+
+The global digital ad verification software market is estimated at **$1.75B – $2.1B** and is projected to expand toward **$3.7B – $4.0B** at a steady compound annual growth rate (CAGR) of **~8.7% – 12%**, propelled by surges in Connected TV (CTV) streaming, retail media networks (RMNs), and generative AI content risks.
+
+The market structure is **heavily concentrated at the top tier** into a duopoly/oligopoly—where **DoubleVerify (DV)** and **Integral Ad Science (IAS)** capture ~75%+ of enterprise measurement spend—while remaining **moderately fragmented in the long tail** across specialized niche providers (bot/fraud defense, cyber ad-threat security, CTV telemetry, and contextual AI) where no single vendor monopolizes point-solutions.
+
+---
+
+## Enterprise SaaS & Hosted Platforms
+
+The table below lists the category-leading ad verification and brand safety SaaS platforms, ranked in descending order of company size (market valuation / revenue / funding):
+
+| Platform | Market Size / Valuation / Revenue | Starting Pricing Tier | Free Tier / Free Trial Limits | Key Verification & Safety Capabilities |
+| :--- | :--- | :--- | :--- | :--- |
+| **[DoubleVerify](https://doubleverify.com/)** | **~$2.11B Market Cap**<br>($769M TTM Revenue) | Custom enterprise rate card (starts at **~$0.04 - $0.08 CPM** for pre-bid verification segments via DSPs) | **No free tier**; 30-day custom enterprise pilot/POC available upon sales qualification (scoped impression volume cap) | MRC-accredited property-level verification across desktop, mobile web, app, & CTV across 55+ languages; tag-based VAST 4.1+ verification and attribution. |
+| **[Integral Ad Science (IAS)](https://integralads.com/)** | **~$1.74B Market Cap**<br>($591M TTM Revenue) | Custom enterprise contract (starts at **~$0.04 - $0.06 CPM** for brand safety/IVT DSP targeting segments) | **No free tier**; 14-day to 30-day enterprise evaluation license/proof-of-concept under sales order form | Global MRC-accredited media measurement and optimization; brand suitability for OpenAI ChatGPT Ads, social video feeds (Meta, TikTok), and in-app media. |
+| **[CHEQ](https://www.cheq.ai/)** | **$1.0B Valuation**<br>($183M raised) | **$199/month** (CHEQ Essentials starting plan for paid search & display traffic) | **No free tier**; 7-day free trial on CHEQ Essentials (up to 2,500 audited clicks/visitors) | Real-time bot prevention, click-fraud blocking for Google Ads, Meta Ads, and programmatic bid streams; Go-to-Market cybersecurity engine. |
+| **[Oracle Moat](https://www.oracle.com/)** | **$850M Acquisition Valuation**<br>(Part of Oracle Corp) | Custom enterprise measurement contract (pre-bid data segments start at **~$0.04 CPM**) | **No free tier**; No self-serve trial (custom pilot managed via media agency order forms) | Ad verification, attention metrics, viewability, and invalid traffic measurement across video, display, and CTV programmatic inventory. |
+| **[GumGum](https://gumgum.com/)** | **~$700M Valuation**<br>($142M raised, $100M+ rev) | Custom programmatic campaign pricing (Contextual PMP segments start at **~$0.50 - $1.50 data CPM**) | **No free tier**; Campaign test credit available upon sales inquiry (typically $2,000 - $5,000 initial spend commitment) | Verity™ contextual intelligence platform leveraging computer vision and natural language processing (NLP) to inspect page text, images, and video frames. |
+| **[HUMAN Security](https://www.humansecurity.com/)** | **~$600M+ Valuation**<br>($280M+ raised) | Custom annual SaaS subscription (starts at **~$20,000/year** for Bot Defender / Ad Fraud protection) | **No free tier**; 14-day guided proof-of-concept / traffic audit trial upon sales approval | Human Defense Platform verifying 20+ trillion digital interactions weekly; real-time SIVT filtering, SDK protection, and programmatic ad fraud mitigation. |
+| **[Zefr](https://www.zefr.com/)** | **~$200M Valuation**<br>($65M raised) | Custom data rate card (social pre-bid/post-bid targeting segments start at **~$0.10 - $0.25 CPM**) | **No free tier**; Custom brand-safety campaign audit / pilot provided upon agency/enterprise request | Content-level brand suitability and GARM-aligned contextual targeting across walled gardens (YouTube, TikTok, Meta, Snap, Reddit); zero buyer VAST tag required. |
+| **[Pixalate](https://www.pixalate.com/)** | **~$60M Valuation**<br>($22.7M raised) | **$500/month** (Starter API tier; Premium Plus tier at $5,000/month for 50M API lookups) | **Free tier available**: 1,000 free API queries/month on Ad Trust & Safety / IP lookup endpoints; 14-day trial for enterprise dashboard | MRC-accredited ad fraud detection, CTV app compliance, Media Ratings Terminal, Seller Trust Index, and pre-bid fraud/IVT protection APIs. |
+| **[Confiant](https://www.confiant.com/)** | **~$25M Valuation**<br>($4.1M raised) | Custom annual publisher SaaS license (starts at **~$1,500/month** base fee scaled to impression tier) | **No free tier**; 14-day proof-of-concept / tag audit trial for verified publisher domains | Real-time creative ad quality and security firewall; blocks malvertising, forced redirects, crypto scams, and unauthorized creative payloads inside the browser. |
+| **[Adloox](https://www.adloox.com/)** | **~$10M Valuation**<br>(Acquired by Peer39) | **$0.03 CPM** (Brand Safety IAB Unsafe Categories Exclusion in DV360; $0.05 CPM for IVT/Suitability) | **No free tier**; 30-day proof-of-concept audit period available via DSP evaluation seats | Independent MRC-accredited European verification suite; deep pre-bid filtration, viewability measurement, and publisher site-level transparency data. |
+
+---
+
+## Open-Source GitHub Projects
+
+Curated open-source toolkits, SDKs, parsers, and engines for engineering self-hosted ad verification, OpenRTB fraud detection, and brand safety pipelines.
+
+*Repositories are sorted in descending order of GitHub stargazers:*
+
+- **[Prebid.js](https://github.com/prebid/Prebid.js)** [![GitHub stars](https://img.shields.io/github/stars/prebid/Prebid.js?style=social&color=white)](https://github.com/prebid/Prebid.js/stargazers)  
+  *Open-source header bidding suite with native C2PA Content Provenance & Real-Time Data (RTD) verification modules.*  
+  Detects embedded cryptographic C2PA markers at the CDN/CMS layer and passes verified content authenticity signals at `site.ext.data.c2pa` directly into OpenRTB bid requests. Enables DSPs to verify publishers cryptographically without relying solely on fragile keyword blocklists.
+
+- **[OpenRTB Specification](https://github.com/openrtb/OpenRTB)** [![GitHub stars](https://img.shields.io/github/stars/openrtb/OpenRTB?style=social&color=white)](https://github.com/openrtb/OpenRTB/stargazers)  
+  *Standard protocol specification and issue repository for real-time bidding in digital media.*  
+  Defines standardized schemas for bid requests, viewability tracking, quality metrics, and creative verification nodes (`bcat`, `badv`, `wlang`, `bapp`).
+
+- **[Prebid Server](https://github.com/prebid/prebid-server)** [![GitHub stars](https://img.shields.io/github/stars/prebid/prebid-server?style=social&color=white)](https://github.com/prebid/prebid-server/stargazers)  
+  *High-performance server-side header bidding engine (Go & Java).*  
+  Facilitates server-side auction orchestration with built-in analytics, user-sync verification, traffic throttling, and pre-bid request filtering before impressions hit exchanges.
+
+- **[IAB OpenRTB Spec Repo](https://github.com/InteractiveAdvertisingBureau/openrtb)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/openrtb?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/openrtb/stargazers)  
+  *Official IAB Tech Lab OpenRTB repository for programmatic protocol standards.*  
+  Contains reference protocol definitions, object models, and guidelines for brand safety signaling across supply-side platforms (SSPs) and demand-side platforms (DSPs).
+
+- **[Vanilla RTB](https://github.com/venediktov/vanilla-rtb)** [![GitHub stars](https://img.shields.io/github/stars/venediktov/vanilla-rtb?style=social&color=white)](https://github.com/venediktov/vanilla-rtb/stargazers)  
+  *C++ Real-Time Bidding (RTB) Demand-Side Platform framework capable of sub-millisecond response times.*  
+  Includes full OpenRTB bidder pipeline support, campaign targeting constraints, geo-filtering, and frequency/fraud filtering modules designed for massive bid stream processing.
+
+- **[bsm/openrtb](https://github.com/bsm/openrtb)** [![GitHub stars](https://img.shields.io/github/stars/bsm/openrtb?style=social&color=white)](https://github.com/bsm/openrtb/stargazers)  
+  *OpenRTB protocol definitions and fast JSON marshaler/unmarshaler for Go.*  
+  High-throughput Go structs for parsing raw incoming bid requests and validating content category blocks, creative attributes, and domain validation.
+
+- **[IAB AdBlockDetection](https://github.com/InteractiveAdvertisingBureau/AdBlockDetection)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/AdBlockDetection?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/AdBlockDetection/stargazers)  
+  *Official IAB Tech Lab utility scripts for detecting ad blockers.*  
+  Provides transparent, open client-side detection routines allowing publishers to identify ad-blocking environments, measure unmonetized traffic, and route verification fallbacks.
+
+- **[IAB Taxonomies](https://github.com/InteractiveAdvertisingBureau/Taxonomies)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/Taxonomies?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/Taxonomies/stargazers)  
+  *Machine-readable schemas for IAB Tech Lab Content, Audience, and Product Taxonomies.*  
+  The industry-standard ontology for brand safety classification, sensitive topic categorization, and contextual placement mapping.
+
+- **[IAB ads.txt Crawler](https://github.com/InteractiveAdvertisingBureau/adstxtcrawler)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/adstxtcrawler?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/adstxtcrawler/stargazers)  
+  *Python reference crawler for Authorized Digital Sellers (ads.txt) and app-ads.txt validation.*  
+  Crawls and verifies domain publisher authorizations to eliminate domain spoofing and arbitrage before bidding.
+
+- **[IAB VAST Reference Specification](https://github.com/InteractiveAdvertisingBureau/VAST)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/VAST?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/VAST/stargazers)  
+  *Official specification for the Video Ad Serving Template (VAST 2.0 through VAST 4.3).*  
+  Governs video creative execution, tracking events, and the `AdVerifications` XML node where verification vendor tags (DoubleVerify, IAS, Moat) inject telemetry inside video players.
+
+- **[IAB SafeFrame](https://github.com/InteractiveAdvertisingBureau/safeframe)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/safeframe?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/safeframe/stargazers)  
+  *Official IAB reference implementation for sandboxed ad container frames.*  
+  Enables secure ad rendering by isolating creative JavaScript from publisher page DOM, preventing malicious script injection, redirect hijacking, and layout manipulation while maintaining viewability tracking.
+
+- **[openvv](https://github.com/InteractiveAdvertisingBureau/openvv)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/openvv?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/openvv/stargazers)  
+  *Open-source video viewability measurement library.*  
+  Pioneering framework for calculating viewable impression metrics and geometry in standard digital video players.
+
+- **[VAST Lint](https://github.com/aleksUIX/vastlint)** [![GitHub stars](https://img.shields.io/github/stars/aleksUIX/vastlint?style=social&color=white)](https://github.com/aleksUIX/vastlint/stargazers)  
+  *Multi-version VAST XML parser and linter (VAST 2.0 to 4.4).*  
+  Validates structural consistency and specifically verifies that the `AdVerifications` node is intact across wrapper hops, header wrappers, and Server-Side Ad Insertion (SSAI) stitchers.
+
+- **[AdVerify](https://github.com/Crynge/AdVerify)** [![GitHub stars](https://img.shields.io/github/stars/Crynge/AdVerify?style=social&color=white)](https://github.com/Crynge/AdVerify/stargazers)  
+  *Ultra-fast Rust programmatic ad fraud detection and brand safety scanner.*  
+  Processes up to **85,000 requests/sec** at **0.012ms p50 latency**. Features six dedicated validation engines: Click Injection (98.7% accuracy), Impression Laundering (96.2%), Bot Traffic (99.1%), Ad Stacking (94.5%), Brand Safety / Hate Speech / Adult Content (95.8%), and IAB Viewability (93.3%).
+
+---
+
+### Architectural Guide: Assembling a Self-Hosted Verification Pipeline
+
+Engineering a resilient, transparent, vendor-independent ad verification stack can be accomplished by uniting open-source modules:
+
+1. **Supply Validation & Anti-Spoofing:** Deploy the **[IAB ads.txt Crawler](https://github.com/InteractiveAdvertisingBureau/adstxtcrawler)** to parse publisher authorizations and prevent domain impersonation.
+2. **Auction Ingestion & Schema Parsing:** Use **[bsm/openrtb](https://github.com/bsm/openrtb)** or **[Prebid Server](https://github.com/prebid/prebid-server)** to decode OpenRTB requests and enforce IAB category blocklists (`bcat`).
+3. **High-Throughput Pre-Bid Fraud Filtration:** Route bid stream records through **[AdVerify](https://github.com/Crynge/AdVerify)** to scrub invalid user agents, bot patterns, and flagged domains under 1 millisecond.
+4. **Content Authenticity:** Leverage the **[Prebid.js](https://github.com/prebid/Prebid.js)** C2PA Real-Time Data module to inject cryptographic provenance keys directly into bid evaluations.
+5. **Video Creative & Tag Verification:** Route all video payloads through **[VAST Lint](https://github.com/aleksUIX/vastlint)** to guarantee `AdVerifications` vendor telemetry nodes survive CDN stitching.
+6. **Execution Sandboxing:** Deliver web creatives through an **[IAB SafeFrame](https://github.com/InteractiveAdvertisingBureau/safeframe)** harness to prevent malicious script breakout and protect consumer privacy.
+
+---
+
+## How to Contribute
+
+1. Fork this repository.
+2. Add new SaaS platforms or open-source libraries (ensure proper tabular / badge formatting).
+3. Confirm that pricing tiers, free tier limits, and valuations are backed by citations or public product rate cards.
+4. Submit a Pull Request with a succinct summary of additions.
+
+---
+
+## Verification Standards & Disclaimers
+
+- **Property-Level vs. Content-Level Measurement:** Media Rating Council (MRC) guidelines differentiate between *Property-Level Verification* (coarse URL/domain categorization) and *Content-Level Brand Safety* (multimodal evaluation of specific text, video frames, and audio tracks). Always verify which specific accreditation a vendor holds for target platforms and languages.
+- **VAST Wrapper Resiliency:** Tag-based verification requires the `<AdVerifications>` element to survive intermediary wrapper redirection and SSAI manifest stitching. Always inspect fully resolved VAST InLine XML to guarantee tags fire properly.
+- **Independence:** This repository is an open community reference and is neither affiliated with nor endorsed by any mentioned ad tech vendor.
