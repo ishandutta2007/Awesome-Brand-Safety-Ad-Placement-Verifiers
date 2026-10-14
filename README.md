@@ -79,59 +79,59 @@ Curated open-source toolkits, SDKs, parsers, and engines for engineering self-ho
 
 *Repositories are sorted in descending order of GitHub stargazers:*
 
-- **[Prebid.js](https://github.com/prebid/Prebid.js)** [![GitHub stars](https://img.shields.io/github/stars/prebid/Prebid.js?style=social&color=white)](https://github.com/prebid/Prebid.js/stargazers)  
+- **[Prebid.js](https://github.com/prebid/Prebid.js)** [![GitHub_Stars](https://img.shields.io/github/stars/prebid/Prebid.js?style=social&color=white)](https://github.com/prebid/Prebid.js/stargazers)  
   *Open-source header bidding suite with native C2PA Content Provenance & Real-Time Data (RTD) verification modules.*  
   Detects embedded cryptographic C2PA markers at the CDN/CMS layer and passes verified content authenticity signals at `site.ext.data.c2pa` directly into OpenRTB bid requests. Enables DSPs to verify publishers cryptographically without relying solely on fragile keyword blocklists.
 
-- **[OpenRTB Specification](https://github.com/openrtb/OpenRTB)** [![GitHub stars](https://img.shields.io/github/stars/openrtb/OpenRTB?style=social&color=white)](https://github.com/openrtb/OpenRTB/stargazers)  
+- **[OpenRTB Specification](https://github.com/openrtb/OpenRTB)** [![GitHub_Stars](https://img.shields.io/github/stars/openrtb/OpenRTB?style=social&color=white)](https://github.com/openrtb/OpenRTB/stargazers)  
   *Standard protocol specification and issue repository for real-time bidding in digital media.*  
   Defines standardized schemas for bid requests, viewability tracking, quality metrics, and creative verification nodes (`bcat`, `badv`, `wlang`, `bapp`).
 
-- **[Prebid Server](https://github.com/prebid/prebid-server)** [![GitHub stars](https://img.shields.io/github/stars/prebid/prebid-server?style=social&color=white)](https://github.com/prebid/prebid-server/stargazers)  
+- **[Prebid Server](https://github.com/prebid/prebid-server)** [![GitHub_Stars](https://img.shields.io/github/stars/prebid/prebid-server?style=social&color=white)](https://github.com/prebid/prebid-server/stargazers)  
   *High-performance server-side header bidding engine (Go & Java).*  
   Facilitates server-side auction orchestration with built-in analytics, user-sync verification, traffic throttling, and pre-bid request filtering before impressions hit exchanges.
 
-- **[IAB OpenRTB Spec Repo](https://github.com/InteractiveAdvertisingBureau/openrtb)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/openrtb?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/openrtb/stargazers)  
+- **[IAB OpenRTB Spec Repo](https://github.com/InteractiveAdvertisingBureau/openrtb)** [![GitHub_Stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/openrtb?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/openrtb/stargazers)  
   *Official IAB Tech Lab OpenRTB repository for programmatic protocol standards.*  
   Contains reference protocol definitions, object models, and guidelines for brand safety signaling across supply-side platforms (SSPs) and demand-side platforms (DSPs).
 
-- **[Vanilla RTB](https://github.com/venediktov/vanilla-rtb)** [![GitHub stars](https://img.shields.io/github/stars/venediktov/vanilla-rtb?style=social&color=white)](https://github.com/venediktov/vanilla-rtb/stargazers)  
+- **[Vanilla RTB](https://github.com/venediktov/vanilla-rtb)** [![GitHub_Stars](https://img.shields.io/github/stars/venediktov/vanilla-rtb?style=social&color=white)](https://github.com/venediktov/vanilla-rtb/stargazers)  
   *C++ Real-Time Bidding (RTB) Demand-Side Platform framework capable of sub-millisecond response times.*  
   Includes full OpenRTB bidder pipeline support, campaign targeting constraints, geo-filtering, and frequency/fraud filtering modules designed for massive bid stream processing.
 
-- **[bsm/openrtb](https://github.com/bsm/openrtb)** [![GitHub stars](https://img.shields.io/github/stars/bsm/openrtb?style=social&color=white)](https://github.com/bsm/openrtb/stargazers)  
+- **[bsm/openrtb](https://github.com/bsm/openrtb)** [![GitHub_Stars](https://img.shields.io/github/stars/bsm/openrtb?style=social&color=white)](https://github.com/bsm/openrtb/stargazers)  
   *OpenRTB protocol definitions and fast JSON marshaler/unmarshaler for Go.*  
   High-throughput Go structs for parsing raw incoming bid requests and validating content category blocks, creative attributes, and domain validation.
 
-- **[IAB AdBlockDetection](https://github.com/InteractiveAdvertisingBureau/AdBlockDetection)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/AdBlockDetection?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/AdBlockDetection/stargazers)  
+- **[IAB AdBlockDetection](https://github.com/InteractiveAdvertisingBureau/AdBlockDetection)** [![GitHub_Stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/AdBlockDetection?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/AdBlockDetection/stargazers)  
   *Official IAB Tech Lab utility scripts for detecting ad blockers.*  
   Provides transparent, open client-side detection routines allowing publishers to identify ad-blocking environments, measure unmonetized traffic, and route verification fallbacks.
 
-- **[IAB Taxonomies](https://github.com/InteractiveAdvertisingBureau/Taxonomies)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/Taxonomies?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/Taxonomies/stargazers)  
+- **[IAB Taxonomies](https://github.com/InteractiveAdvertisingBureau/Taxonomies)** [![GitHub_Stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/Taxonomies?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/Taxonomies/stargazers)  
   *Machine-readable schemas for IAB Tech Lab Content, Audience, and Product Taxonomies.*  
   The industry-standard ontology for brand safety classification, sensitive topic categorization, and contextual placement mapping.
 
-- **[IAB ads.txt Crawler](https://github.com/InteractiveAdvertisingBureau/adstxtcrawler)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/adstxtcrawler?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/adstxtcrawler/stargazers)  
+- **[IAB ads.txt Crawler](https://github.com/InteractiveAdvertisingBureau/adstxtcrawler)** [![GitHub_Stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/adstxtcrawler?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/adstxtcrawler/stargazers)  
   *Python reference crawler for Authorized Digital Sellers (ads.txt) and app-ads.txt validation.*  
   Crawls and verifies domain publisher authorizations to eliminate domain spoofing and arbitrage before bidding.
 
-- **[IAB VAST Reference Specification](https://github.com/InteractiveAdvertisingBureau/VAST)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/VAST?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/VAST/stargazers)  
+- **[IAB VAST Reference Specification](https://github.com/InteractiveAdvertisingBureau/VAST)** [![GitHub_Stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/VAST?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/VAST/stargazers)  
   *Official specification for the Video Ad Serving Template (VAST 2.0 through VAST 4.3).*  
   Governs video creative execution, tracking events, and the `AdVerifications` XML node where verification vendor tags (DoubleVerify, IAS, Moat) inject telemetry inside video players.
 
-- **[IAB SafeFrame](https://github.com/InteractiveAdvertisingBureau/safeframe)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/safeframe?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/safeframe/stargazers)  
+- **[IAB SafeFrame](https://github.com/InteractiveAdvertisingBureau/safeframe)** [![GitHub_Stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/safeframe?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/safeframe/stargazers)  
   *Official IAB reference implementation for sandboxed ad container frames.*  
   Enables secure ad rendering by isolating creative JavaScript from publisher page DOM, preventing malicious script injection, redirect hijacking, and layout manipulation while maintaining viewability tracking.
 
-- **[openvv](https://github.com/InteractiveAdvertisingBureau/openvv)** [![GitHub stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/openvv?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/openvv/stargazers)  
+- **[openvv](https://github.com/InteractiveAdvertisingBureau/openvv)** [![GitHub_Stars](https://img.shields.io/github/stars/InteractiveAdvertisingBureau/openvv?style=social&color=white)](https://github.com/InteractiveAdvertisingBureau/openvv/stargazers)  
   *Open-source video viewability measurement library.*  
   Pioneering framework for calculating viewable impression metrics and geometry in standard digital video players.
 
-- **[VAST Lint](https://github.com/aleksUIX/vastlint)** [![GitHub stars](https://img.shields.io/github/stars/aleksUIX/vastlint?style=social&color=white)](https://github.com/aleksUIX/vastlint/stargazers)  
+- **[VAST Lint](https://github.com/aleksUIX/vastlint)** [![GitHub_Stars](https://img.shields.io/github/stars/aleksUIX/vastlint?style=social&color=white)](https://github.com/aleksUIX/vastlint/stargazers)  
   *Multi-version VAST XML parser and linter (VAST 2.0 to 4.4).*  
   Validates structural consistency and specifically verifies that the `AdVerifications` node is intact across wrapper hops, header wrappers, and Server-Side Ad Insertion (SSAI) stitchers.
 
-- **[AdVerify](https://github.com/Crynge/AdVerify)** [![GitHub stars](https://img.shields.io/github/stars/Crynge/AdVerify?style=social&color=white)](https://github.com/Crynge/AdVerify/stargazers)  
+- **[AdVerify](https://github.com/Crynge/AdVerify)** [![GitHub_Stars](https://img.shields.io/github/stars/Crynge/AdVerify?style=social&color=white)](https://github.com/Crynge/AdVerify/stargazers)  
   *Ultra-fast Rust programmatic ad fraud detection and brand safety scanner.*  
   Processes up to **85,000 requests/sec** at **0.012ms p50 latency**. Features six dedicated validation engines: Click Injection (98.7% accuracy), Impression Laundering (96.2%), Bot Traffic (99.1%), Ad Stacking (94.5%), Brand Safety / Hate Speech / Adult Content (95.8%), and IAB Viewability (93.3%).
 
